@@ -95,6 +95,7 @@ function AdminPage({ users, setUsers }) {
         </div>
 
         <button
+          type="submit"
           onClick={handleSubmit}
           className="group cursor-pointer outline-none hover:rotate-90 duration-300 ml-2"
         >
