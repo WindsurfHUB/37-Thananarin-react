@@ -13,6 +13,11 @@ function AdminPage({ users, setUsers }) {
   };
 
   const handleSubmit = () => {
+    const { firstName, lastName, position } = form;
+    if (!firstName || !lastName || !position) {
+      alert("Input is empty");
+      return;
+    }
     setUsers([...users, form]);
     setForm({ firstName: "", lastName: "", position: "" });
   };
@@ -44,54 +49,60 @@ function AdminPage({ users, setUsers }) {
       </div>
       <div className="flex flex-row">
         <div className="relative">
-          <input
-            type="text"
-            name="firstName"
-            value={form.firstName}
-            onChange={handleChange}
-            required
-            className="border-b border-gray-300 py-1 focus:border-b-2 focus:border-blue-700 transition-colors focus:outline-none peer bg-inherit"
-          />
           <label
-            htmlFor="username"
-            className="absolute text-sm left-0 top-1 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all peer-focus:text-blue-700"
+            htmlFor="inputname"
+            class="block text-gray-800 font-semibold text-sm"
           >
             First Name
           </label>
+          <div class="mt-2">
+            <input
+              type="text"
+              name="firstName"
+              value={form.firstName}
+              onChange={handleChange}
+              required
+              class="block w-56 rounded-md py-1.5 px-2 ring-1 ring-inset ring-gray-400 focus:text-gray-800"
+            />
+          </div>
         </div>
 
         <div className="relative">
-          <input
-            type="text"
-            name="lastName"
-            value={form.lastName}
-            onChange={handleChange}
-            required
-            className="border-b border-gray-300 py-1 focus:border-b-2 focus:border-blue-700 transition-colors focus:outline-none peer bg-inherit"
-          />
-          <label
-            htmlFor="username"
-            className="absolute text-sm left-0 top-1 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all peer-focus:text-blue-700"
+        <label
+            htmlFor="inputname"
+            class="block text-gray-800 font-semibold text-sm"
           >
             Last Name
           </label>
+          <div class="mt-2">
+            <input
+              type="text"
+              name="lastName"
+              value={form.lastName}
+              onChange={handleChange}
+              required
+              class="block w-56 rounded-md py-1.5 px-2 ring-1 ring-inset ring-gray-400 focus:text-gray-800"
+            />
+          </div>
         </div>
 
         <div className="relative">
-          <input
-            type="text"
-            name="position"
-            value={form.position}
-            onChange={handleChange}
-            required
-            className="border-b border-gray-300 py-1 focus:border-b-2 focus:border-blue-700 transition-colors focus:outline-none peer bg-inherit"
-          />
-          <label
-            htmlFor="username"
-            className="absolute text-sm left-0 top-1 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all peer-focus:text-blue-700"
+        <label
+            htmlFor="inputname"
+            class="block text-gray-800 font-semibold text-sm"
           >
             Position
           </label>
+          <div class="mt-2">
+            <input
+              type="text"
+              name="position"
+              value={form.position}
+              onChange={handleChange}
+              required
+              class="block w-56 rounded-md py-1.5 px-2 ring-1 ring-inset ring-gray-400 focus:text-gray-800"
+            />
+          </div>
         </div>
 
         <button
