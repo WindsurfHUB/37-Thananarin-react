@@ -45,6 +45,7 @@ function AdminPage({ users, setUsers }) {
       <div className="flex flex-row">
         <div className="relative">
           <input
+            required
             name="firstName"
             value={form.firstName}
             onChange={handleChange}
@@ -60,6 +61,7 @@ function AdminPage({ users, setUsers }) {
 
         <div className="relative">
           <input
+            required
             name="lastName"
             value={form.lastName}
             onChange={handleChange}
@@ -75,6 +77,7 @@ function AdminPage({ users, setUsers }) {
 
         <div className="relative">
           <input
+            required
             name="position"
             value={form.position}
             onChange={handleChange}
