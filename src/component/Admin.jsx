@@ -45,10 +45,11 @@ function AdminPage({ users, setUsers }) {
       <div className="flex flex-row">
         <div className="relative">
           <input
-            required
+            type="text"
             name="firstName"
             value={form.firstName}
             onChange={handleChange}
+            required
             className="border-b border-gray-300 py-1 focus:border-b-2 focus:border-blue-700 transition-colors focus:outline-none peer bg-inherit"
           />
           <label
@@ -61,10 +62,11 @@ function AdminPage({ users, setUsers }) {
 
         <div className="relative">
           <input
-            required
+            type="text"
             name="lastName"
             value={form.lastName}
             onChange={handleChange}
+            required
             className="border-b border-gray-300 py-1 focus:border-b-2 focus:border-blue-700 transition-colors focus:outline-none peer bg-inherit"
           />
           <label
@@ -77,10 +79,11 @@ function AdminPage({ users, setUsers }) {
 
         <div className="relative">
           <input
-            required
+            type="text"
             name="position"
             value={form.position}
             onChange={handleChange}
+            required
             className="border-b border-gray-300 py-1 focus:border-b-2 focus:border-blue-700 transition-colors focus:outline-none peer bg-inherit"
           />
           <label
