@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Clock from "./Analog";
+import Time from "./Clock";
 
 function HomePage() {
   return (
@@ -19,6 +21,12 @@ function HomePage() {
             Admin Home Sector
           </button>
         </Link>
+      </div>
+      <div className="mb-12">
+        <Clock />
+      </div>
+      <div className="text-2xl">
+        <Time />
       </div>
     </div>
   );

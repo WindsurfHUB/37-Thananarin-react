@@ -4,7 +4,7 @@ import Rating from "./Rating";
 
 function NavBar() {
   return (
-    <nav className="w-screen flex justify-end p-4 bg-[#58FFE6]">
+    <nav className="w-screen flex justify-between p-4 bg-[#58FFE6]">
       <Rating />
       <div className="w-36">
         <ul className="font-semibold flex justify-between p-1">
