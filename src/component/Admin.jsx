@@ -27,7 +27,7 @@ function AdminPage({ users, setUsers }) {
       "Are you sure you want to delete this user?"
     );
     if (isConfirmed) {
-      setUsers(users.filter((_, i) => i !== index));
+      setUsers(users.filter((currentUser, currentIndex) => currentIndex !== userIndex));
     }
   };
 

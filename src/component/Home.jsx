@@ -5,7 +5,7 @@ import Time from "./Clock";
 
 function HomePage() {
   return (
-    <div className="flex flex-col items-center mt-16 gap-16">
+    <div className="h-auto flex flex-col items-center mt-16 gap-16">
       <h1 className="flex justify-center text-5xl">
         Generation Thailand <br />
         React - Assessment
@@ -22,11 +22,11 @@ function HomePage() {
           </button>
         </Link>
       </div>
-      <div className="mb-12">
-        <Clock />
-      </div>
-      <div className="text-2xl">
+      <div className="pt-12 text-2xl">
         <Time />
+      </div>
+      <div className="mt-12">
+        <Clock />
       </div>
     </div>
   );
